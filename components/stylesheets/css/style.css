@@ -1,0 +1,51 @@
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+a {
+    color: #e2e2e9;
+    text-decoration: none;
+}
+.container ul.nav{
+    width: 100%;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs > li > a:hover {
+    border-color: transparent;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav-tabs > li > a {
+    margin-right: 0px;
+    line-height: 1.42857143; 
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    outline-offset: 0px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 3px;
+    cursor: pointer;
+}
+.nav > li:first-child > a {
+    cursor: auto;
+}
+.nav-tabs > li> a:hover,.nav-tabs > li> a:focus {
+     color: #ffffff;
+     text-decoration: none;
+ }
+.nav-tabs > li:first-child> a:not(:hover),.nav-tabs > li:first-child> a:not(:focus) {
+    color: #ffffff;
+    text-decoration: none;
+}
+a:active, a:hover {
+    outline: 0;
+}
