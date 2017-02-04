@@ -14,6 +14,9 @@ a {
 .nav-tabs {
     border-bottom: none;
 }
+.navbar-nav {
+    margin: 7.5px 0px;
+}
 .nav-tabs > li > a:hover {
     border-color: transparent;
 }
@@ -48,4 +51,83 @@ a {
 }
 a:active, a:hover {
     outline: 0;
+}
+.jumbotron {
+    background:linear-gradient(#d9d2bf 47%, #bfb8a6 65%, #e6dfcc 85%), linear-gradient(90deg, #bfb8a6 56%,  #e6dfcc 85%);
+    background-size: 3px 3px;
+    background-position: center center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+
+}
+.navbar-fixed-top{
+    position: relative;
+    margin-bottom: 0px;
+}
+.jumbotron:after{
+    content: '';
+    background: linear-gradient(#c7c0ae, transparent 15%), linear-gradient(90deg, #c7c0ae, transparent 16%);
+}
+.btn-default {
+    background: linear-gradient(50deg, #c7c0ae, transparent 3px);
+}
+.btn-default:before {
+    top: 0;
+    background: linear-gradient(to top, #c7c0ae 0%, transparent 100%);
+}
+
+.btn-default:after {
+    bottom: 0;
+    background: linear-gradient(to bottom, #c7c0ae 0%, transparent 100%);
+}
+.btn-default:before,
+.btn-default:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    width: 1px;
+    height: 50%;
+}
+.btn-default:hover, .btn-default:focus {
+    background: linear-gradient(#c7c0ae, transparent 15%), linear-gradient(90deg, #c7c0ae, transparent 16%);
+
+}
+.galery{
+    height: 450px;
+    background-color: #0f0f0f;
+    margin: 20px auto;
+    box-shadow: 0px 32px 27px rgba(0, 0, 0, 1);
+
+}
+.btn-default:hover {
+    border-color: transparent;
+}
+.twit{
+    background-color: #0f0f0f;
+    opacity: 0.6;
+    margin-top: 50px;
+    padding: 20px;
+}
+.navbar-inner .footer {
+position: relative;
+     bottom: 0;
+     width: 100%;
+     min-height: 200px;
+
+ }
+.navbar-inner .footer, .navbar-inner .thumbnail {
+    background-color: #6f6c65;
+    border: none;
+}
+.thumbnail ul>li>ul li{
+    float: left;
+    padding: 5px;
+    background-color: #122b40;
+    margin: 0 5px 0 0;
+}
+.cron>.navbar {
+    margin-bottom: 0px;
+    color: white;
 }

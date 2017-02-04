@@ -5,46 +5,133 @@
     <title>Art Gallery</title>
     <link rel="stylesheet" href="components/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="components/stylesheets/bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <script src="components/stylesheets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="components/scripts/bower_components/jquery/dist/jquery.js"></script>
+    <script src="components/stylesheets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="components/scripts/bower_components/angular/angular.js"></script>
     <link rel="stylesheet" href="components/stylesheets/css/style.css">
 
 </head>
 <body>
     <div class="container-fluid">
-
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <ul class="nav navbar-nav">
-                        <li>
-                    <div class="navbar-header">
-
-
-                                <ul class="nav nav-tabs">
-                                    <li> <a>Subscribe to: </a></li>
-                                    <li><a>Comments</a></li>
-                                    <li><a>/</a></li>
-                                    <li><a>Email</a></li>
-                                </ul>
-                    </div>
-                            </li>
-                            <li class=" navbar-right navbar-form">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                            </li>
-
-
-
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="navbar-header">
+                            <ul class="nav nav-tabs">
+                                <li> <a>Subscribe to: </a></li>
+                                <li><a>Comments</a></li>
+                                <li><a>/</a></li>
+                                <li><a>Email</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="navbar-right navbar-form">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </li>
                 </ul>
-                </div>
             </div>
-
+        </div>
         <div class="jumbotron">
             <div class="container">
-                <h1>Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
+                <div class="btn-group btn-group-lg navbar-right">
+                    <button type="button" class="btn btn-default">Home</button>
+                    <button type="button" class="btn btn-default">Gallery</button>
+                </div>
             </div>
+            <div class="container">
+                <div class="galery"> тут слайдер</div>
+            </div>
+            <div class="container">
+                <div class="twit">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <div class="page-header">
+                                    <h3>заголовок страницы</h3>
+                                </div>
+                                <div class="caption">
+                                    <h3>эскиз</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Кнопка</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <div class="page-header">
+                                    <h3>заголовок страницы2</h3>
+                                </div>
+                                <div class="caption">
+                                    <h3>эскиз</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Кнопка</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <div class="page-header">
+                                    <h3>заголовок страницы</h3>
+                                </div>
+                                <div class="caption">
+                                    <h3>Ярлык эскиза</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Кнопка</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="navbar-inner">
+        <div class="container footer">
+            <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                    <h2>категория</h2>
+                    <ul>
+                        <li><a>категория1</a></li>
+                        <li><a>категория1</a></li>
+                        <li><a>категория1</a></li>
+                        <li><a>категория1</a></li>
+                        <li><a>категория1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6">
+                <div class="thumbnail">
+                    <h2>галерея</h2>
+                    <ul >
+                        <li>
+                            <ul class="nav nav-tabs">
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="nav nav-tabs">
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                                <li><img src="#" width="50" height="50"></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cron">
+        <div class="navbar navbar-inverse navbar-bottom">
+            <span>лалалалалл</span>
+        </div>
+    </div>
+
 </body>
 </html>
