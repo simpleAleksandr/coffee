@@ -2,9 +2,6 @@ html, body{
     height: 100%;
     width: 100%;
 }
-
-
-
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
@@ -14,6 +11,9 @@ html, body{
 a {
     color: #e2e2e9;
     text-decoration: none;
+}
+.navbar-inverse{
+    border-radius: 0;
 }
 .container ul.nav {
     width: 100%;
@@ -118,14 +118,14 @@ a:hover {
     margin-top: 50px;
     padding: 20px;
 }
-.navbar-inner .footer {
+ .footer {
     position: relative;
     bottom: 0;
     width: 100%;
     min-height: 200px;
 }
-.navbar-inner .footer,
-.navbar-inner .thumbnail {
+ .footer,
+ .thumbnail {
     background-color: #6f6c65;
     border: none;
 }
@@ -141,10 +141,10 @@ a:hover {
 }
 .gallery {
     width: 100%;
-    background-color: rgba(15, 15, 15, 0.35);
     padding: 40px 20px;
     margin: 0px auto;
-    box-shadow: 0 0 20px #000000;
+    border: 1px solid gray;
+    background-color: white;
 }
 div.gallery-conteiner {
     text-align: center;
@@ -154,7 +154,7 @@ div.gallery-conteiner {
 .container .gallery .gallery-conteiner > .col-lg-4 {
     padding-right: 5px;
     padding-left: 5px;
-    margin: 5px 0 0 0;
+    /*margin: 5px 0 0 0;*/
 }
 .img-thumbnail,
 .container-fluid .jumbotron .container .btn-default:active:hover,
@@ -231,6 +231,7 @@ ul li{
 .close-form span:last-child {
     transform: rotate(-45deg);
 }
+
 @media (min-width: 1200px) {
     .gallery .col-lg-2 {
         width: auto;
@@ -243,7 +244,13 @@ ul li{
     }
     .container-form .bottom-send{
         margin: 20px 0;
-
+    }
+    .sort-global{
+        max-width: 197px;
+    }
+    .galery, .galery img{
+        height: 485px !important;
+        min-height: 485px !important;
     }
 }
 @media (min-width: 979px) and (max-width: 1199px) {
@@ -257,12 +264,13 @@ ul li{
         margin-right: 45px;
         margin-left: 5px;
     }
-    .gallery-conteiner .img-thumbnail img {
-        height: 300px !important;
-    }
+
     .container-form .bottom-send{
         margin: 20px 0;
-
+    }
+    .galery, .galery img{
+        height: 350px !important;
+        min-height: 350px !important;
     }
 }
 @media (min-width: 768px) and (max-width: 978px) {
@@ -280,8 +288,15 @@ ul li{
         margin: 20px 0;
 
     }
+    .galery, .galery img{
+        height: 260px !important;
+        min-height: 260px !important;
+    }
   }
 @media (max-width: 767px) {
+    .gallery-conteiner.col-lg-10{
+        display: flex;
+    }
     .gallery .sort-global {
         margin: 0 15px 0 5px;
     }
@@ -296,8 +311,12 @@ ul li{
     .container-fluid .jumbotron {
         padding-top: 10px;
     }
-    .gallery-conteiner .img-thumbnail img {
+/*    .gallery-conteiner .img-thumbnail img {
         height: 350px !important;
+    }*/
+    .galery, .galery img{
+        height: 200px !important;
+        min-height: 200px !important;
     }
     .container-rama{
         width: 90%;
@@ -312,5 +331,45 @@ ul li{
     .container-form{
         padding: 5px;
     }
+    .gallery-conteiner .gallrry-item{
+        margin: auto;
+    }
+}
 
+.gallery-conteiner.col-lg-10 .center-block.col-xs-12{
+    flex-direction: column;
+}
+.gallery .gallery-conteiner .center-block.col-xs-7{
+    max-width: 290px;
+    padding: 0px;
+   /* margin-top: 10px;*/
+    background-color: #0f0f0f;
+
+}
+.gallery .gallery-conteiner .center-block.col-sm-6,.gallery .gallery-conteiner .center-block.col-md-4, .col-lg-4{
+    max-width: 290px;
+    padding: 0px;
+   /* margin-top: 10px;*/
+    background-color: #0f0f0f;
+
+}
+/*.gallery .gallery-conteiner .center-block.col-md-4:nth-child(3n+2),
+.gallery .gallery-conteiner .center-block.col-sm-6:nth-child(3n+2),
+.gallery .gallery-conteiner .center-block.col-xs-7:nth-child(3n+2),
+.col-lg-4:nth-child(3n+2){
+    margin-left:5px;
+    margin-right: 5px;
+}*/
+a img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 5px #000000;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    border: 3px solid white;
 }
