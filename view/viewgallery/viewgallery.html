@@ -1,109 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" data-ng-app="sPainter">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery</title>
-    <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <script src="../../components/scripts/bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../components/scripts/bower_components/bootstrap/bootstrap.js"></script>
-    <script src="../../components/scripts/bower_components/angular/angular.js"></script>
-    <link rel="stylesheet" href="../../components/stylesheets/css/style.css">
-    <script src="../../components/scripts/app/app.js"></script>
-    <script src="../../components/scripts/app/controllers/pictureCntrl.js"></script>
-    <script src="../../components/scripts/app/controllers/contactCtrl.js"></script>
-    <script src="../../components/scripts/app/controllers/categoryCtrl.js"></script>
-    <script src="../../components/scripts/app/controllers/copyrightCtrl.js"></script>
-    <script src="../../components/scripts/app/controllers/smallPictCtrl.js"></script>
-    <script src="../../components/scripts/app/controllers/titleCtrl.js"></script>
-
-</head>
-<body ng-controller="TitleCtrl as TitleCtrl">
-<div class="container-fluid">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li>
-                    <div class="navbar-header">
-                        <ul class="nav nav-tabs">
-                            <li ng-repeat="title in TitleCtrl.titleName.sender"><a>{{title.send}}</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class=" navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Поиск...">
-                </li>
-                <li class=" navbar-right">
-                    <ul class="nav nav-tabs ">
-                        <li ng-repeat="title in TitleCtrl.titleName.language"><a>{{title.send}}</a></li>
-                    </ul>
-                </li>
-            </ul>
+<div class="gallery row container">
+    <div class="col-lg-2  navbar-right">
+        <div class="sort-global">
+            <p>{{TitleCtrl.titleName.sortsTitle}}</p>
+            <input type="text" class="form-control" id="tokenfield" data-ng-attr-placeholder="{{TitleCtrl.titleName.sortsAttrs}}">
         </div>
     </div>
-    <div class="jumbotron">
-        <div class="container">
-            <div class="btn-group btn-group-lg navbar navbar-right">
-                <ul class="nav nav-pills">
-                    <li ng-repeat="buttons in TitleCtrl.titleName.buttons"><a  class="btn btn-default">{{buttons.send}}</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container">
-            <div class="gallery row container">
-                <div class="col-lg-2  navbar-right">
-                    <div class="sort-global">
-                        <p>{{TitleCtrl.titleName.sortsTitle}}</p>
-                        <input type="text" class="form-control" id="tokenfield" ng-attr-placeholder="{{TitleCtrl.titleName.sortsAttrs}}">
-                    </div>
-                </div>
-                    <div  ng-controller="PictureCtrl as PictureCtrl"  class="gallery-conteiner center-block col-lg-10">
-                        <div ng-repeat="picture in PictureCtrl.pict" class="center-block col-lg-4 col-md-4 col-sm-6 col-xs-12"><span>{{picture.name}}</span><a href="#"><img ng-src="{{picture.pictURL}}" width="504" height="260" ng-attr-alt="{{picture.name}}"></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div  data-ng-controller="PictureCtrl as PictureCtrl"  class="gallery-conteiner center-block col-lg-10">
+        <div data-ng-repeat="picture in PictureCtrl.pict" class="center-block col-lg-4 col-md-4 col-sm-6 col-xs-12"><span>{{picture.name}}</span><a href="#"><img src="#" data-ng-src="{{picture.pictURL}}" width="504" height="260" data-ng-attr-alt="{{picture.name}}" alt=""></a></div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="footer">
-        <div class="container">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="thumbnail">
-                    <h2>{{TitleCtrl.titleName.category}}</h2>
-                    <ul ng-controller="CategoryCtrl as CategoryCtrl">
-                        <li ng-repeat="category in CategoryCtrl.category"><a>{{category.name}}</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="thumbnail">
-                    <h2>Вложения:</h2>
-                    <ul ng-controller="LittlePictureCtrl as LittlePictureCtrl" >
-                        <li ng-repeat="little in LittlePictureCtrl.littlePict">
-                            <ul  class="nav nav-tabs">
-                                <li ng-repeat="littlePict in little.name"><img alt="img" ng-src="{{littlePict.liPictURL}}" width="50" height="50" ></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="thumbnail">
-                    <h2>{{TitleCtrl.titleName.contacts}}</h2>
-                    <ul ng-controller="ContactCtrl as ContactCtrl">
-                        <li ng-repeat="contact in ContactCtrl.contact"><span>{{contact.name}}</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="cron">
-    <div ng-controller="CopyrightCtrl as CopyrightCtrl" class="navbar navbar-inverse navbar-bottom">
-        <span>{{CopyrightCtrl.copyright}}</span>
-    </div>
-</div>
-</body>
-</html>

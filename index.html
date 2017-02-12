@@ -9,10 +9,19 @@
     <script src="components/scripts/bower_components/jquery/dist/jquery.js"></script>
     <script src="components/scripts/bower_components/bootstrap/bootstrap.js"></script>
     <script src="components/scripts/bower_components/angular/angular.js"></script>
+    <script src="components/scripts/bower_components/angular-route/angular-route.js"></script>
     <link rel="stylesheet" href="components/stylesheets/css/style.css">
     <script src="components/scripts/app/app.js"></script>
-    </head>
-<body>
+    <script src="components/scripts/app/main.js"></script>
+    <script src="components/scripts/app/controllers/pictureCntrl.js"></script>
+    <script src="components/scripts/app/controllers/contactCtrl.js"></script>
+    <script src="components/scripts/app/controllers/categoryCtrl.js"></script>
+    <script src="components/scripts/app/controllers/copyrightCtrl.js"></script>
+    <script src="components/scripts/app/controllers/smallPictCtrl.js"></script>
+    <script src="components/scripts/app/controllers/titleCtrl.js"></script>
+    <script src="components/scripts/app/directives/testDerictive.js"></script>
+</head>
+<body data-ng-controller="TitleCtrl as TitleCtrl" data-ng-cloak>
 <div class="container-fluid">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -20,15 +29,17 @@
                 <li>
                     <div class="navbar-header">
                         <ul class="nav nav-tabs">
-                            <li> <a>Subscribe to: </a></li>
-                            <li><a>Comments</a></li>
-                            <li><a>/</a></li>
-                            <li><a>Email</a></li>
+                            <li data-ng-repeat="title in TitleCtrl.titleName.sender"><a>{{title.send}}</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="navbar-right navbar-form">
-                    <input type="text" class="form-control" placeholder="Search...">
+                <li class=" navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Поиск...">
+                </li>
+                <li class=" navbar-right">
+                    <ul class="nav nav-tabs ">
+                        <li data-ng-repeat="title in TitleCtrl.titleName.language"><a>{{title.send}}</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -37,72 +48,50 @@
         <div class="container">
             <div class="btn-group btn-group-lg navbar navbar-right">
                 <ul class="nav nav-pills">
-                    <li><a  class="btn btn-default">Home</a></li>
-                    <li><a  class="btn btn-default">Gallery</a></li>
+                    <li data-ng-repeat="button in TitleCtrl.titleName.buttons"><a data-ng-href="{{button.urlPage}}" class="btn btn-default">{{button.send}}</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container">
-            <div class="galery">
-                <img alt="img" src="hz-__X3PMwU.jpg" style="width: 100%; height: 485px; box-shadow: 0 4px 7px #000000;">
-            </div>
-        </div>
+        <div class="container"><ng-view></ng-view></div>
     </div>
 </div>
 <div class="container-fluid">
     <div class="footer">
         <div class="container">
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="thumbnail">
-                <h2>категория</h2>
-                <ul>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                </ul>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="thumbnail">
+                    <h2>{{TitleCtrl.titleName.category}}</h2>
+                    <ul data-ng-controller="CategoryCtrl as CategoryCtrl">
+                        <li data-ng-repeat="category in CategoryCtrl.category"><a>{{category.name}}</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="thumbnail">
-                <h2>галерея</h2>
-                <ul >
-                    <li>
-                        <ul class="nav nav-tabs">
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50" ></li>
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50"></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class="nav nav-tabs">
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="hz-__X3PMwU.jpg" width="50" height="50"></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="thumbnail">
+                    <h2>Вложения:</h2>
+                    <ul data-ng-controller="LittlePictureCtrl as LittlePictureCtrl" >
+                        <li data-ng-repeat="little in LittlePictureCtrl.littlePict">
+                            <ul  class="nav nav-tabs">
+                                <li data-ng-repeat="littlePict in little.name"><img alt="img" src="#" data-ng-src="{{littlePict.liPictURL}}" width="50" height="50" ></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="thumbnail">
-                <h2>контакты</h2>
-                <ul>
-                    <li><span>ФИО</span></li>
-                    <li><span>телефон</span></li>
-                    <li><span>Адрес</span></li>
-                    <li><span>почта</span></li>
-                    <li><span>skype</span></li>
-                </ul>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="thumbnail">
+                    <h2>{{TitleCtrl.titleName.contacts}}</h2>
+                    <ul data-ng-controller="ContactCtrl as ContactCtrl">
+                        <li data-ng-repeat="contact in ContactCtrl.contact"><span>{{contact.name}}</span></li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </div>
 <div class="cron">
-    <div class="navbar navbar-inverse navbar-bottom">
-        <span>лалалалалл</span>
+    <div data-ng-controller="CopyrightCtrl as CopyrightCtrl" class="navbar navbar-inverse navbar-bottom">
+        <span>{{CopyrightCtrl.copyright}}</span>
     </div>
 </div>
 </body>

@@ -1,131 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery</title>
-    <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <script src="../../components/scripts/bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../components/scripts/bower_components/bootstrap/bootstrap.js"></script>
-    <script src="../../components/scripts/bower_components/angular/angular.js"></script>
-    <link rel="stylesheet" href="../../components/stylesheets/css/style.css">
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <div class="navbar-header">
-                            <ul class="nav nav-tabs">
-                                <li> <a>Subscribe to: </a></li>
-                                <li><a>Comments</a></li>
-                                <li><a>/</a></li>
-                                <li><a>Email</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="navbar-right navbar-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="jumbotron">
-            <div class="container">
-                <div class="btn-group btn-group-lg navbar navbar-right">
-                    <ul class="nav nav-pills">
-                        <li><a  class="btn btn-default">Home</a></li>
-                        <li><a  class="btn btn-default">Gallery</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="container-rama border-all">
-                    <div class="top-name-form border-all">
-                        <span class="title-mame-dialog">comment</span>
-                        <button type="button" class="close-form border-all btn btn-default" title="close">
-                            <span class="close-for-forms"></span>
-                        </button>
-                    </div>
-                    <div class="form-content">
-                         <form>
-                            <fieldset>
-                                <label class="col-form-label">Имя:</label>
-                                <input id="name-person" class="form-control text border-all" type="text" placeholder="Василий" name="name">
-                                <label class="col-form-label">Эл.адрес:</label>
-                                <input id="mail-person" class="form-control text border-all" type="text" placeholder="mail@gmail.com">
-                                <label class="col-form-label">Сообщение:</label>
-                                <textarea id="text-person" class="form-control text border-all" placeholder="не более 2000 символов"></textarea>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="button-content border-all">
-                        <button type="button" class="border-all btn btn-default " title="send">Отправить</button>
-                    </div>
-                </div>
-               </div>
-            </div>
-        </div>
+<div class="container-rama border-all">
+    <div class="top-name-form border-all">
+        <span class="title-mame-dialog">comment</span>
+        <button type="button" class="close-form border-all btn btn-default" title="close">
+            <span class="close-for-forms"></span>
+        </button>
     </div>
-<div class="navbar-inner">
-    <div class="container footer">
-        <div class="col-sm-4 col-md-3">
-            <div class="thumbnail">
-                <h2>категория</h2>
-                <ul>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                    <li><a>категория1</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-8 col-md-6">
-            <div class="thumbnail">
-                <h2>галерея</h2>
-                <ul >
-                    <li>
-                        <ul class="nav nav-tabs">
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class="nav nav-tabs">
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                            <li><img alt="img" src="../../hz-__X3PMwU.jpg" width="50" height="50"></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-3">
-            <div class="thumbnail">
-                <h2>контакты</h2>
-                <ul>
-                    <li><span>ФИО</span></li>
-                    <li><span>телефон</span></li>
-                    <li><span>Адрес</span></li>
-                    <li><span>почта</span></li>
-                    <li><span>skype</span></li>
-                </ul>
-            </div>
-        </div>
+    <div class="form-content">
+        <form>
+            <fieldset>
+                <label class="col-form-label">Имя:</label>
+                <input id="name-person" class="form-control text border-all" type="text" placeholder="Василий" name="name">
+                <label class="col-form-label">Эл.адрес:</label>
+                <input id="mail-person" class="form-control text border-all" type="text" placeholder="mail@gmail.com">
+                <label class="col-form-label">Сообщение:</label>
+                <textarea id="text-person" class="form-control text border-all" placeholder="не более 2000 символов"></textarea>
+            </fieldset>
+        </form>
+    </div>
+    <div class="button-content border-all">
+        <button type="button" class="border-all btn btn-default " title="send">Отправить</button>
     </div>
 </div>
-<div class="cron">
-    <div class="navbar navbar-inverse navbar-bottom">
-        <span>лалалалалл</span>
-    </div>
-</div>
-</body>
-</html>

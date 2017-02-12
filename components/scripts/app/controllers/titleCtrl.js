@@ -14,8 +14,11 @@ angular.module('sPainter').controller('TitleCtrl', function () {
             ],
 
             buttons: [
-                {send: 'Главная'},
-                {send: 'Галлерея'}
+                {
+                    send: 'Главная',
+                    urlPage: '#/'
+                },
+                {send: 'Галлерея', urlPage: '#/gallery'}
             ],
             sortsTitle: 'Cортировать по:',
             sortsAttrs: 'Cортировать...',

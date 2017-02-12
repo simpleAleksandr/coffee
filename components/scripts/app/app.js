@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('sPainter',[])
+    var app = angular.module('sPainter',['ngRoute'])
 })();
 
 
