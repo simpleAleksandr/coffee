@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../components/stylesheets/bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <script src="../../components/scripts/bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../components/stylesheets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../components/scripts/bower_components/bootstrap/bootstrap.js"></script>
     <script src="../../components/scripts/bower_components/angular/angular.js"></script>
     <link rel="stylesheet" href="../../components/stylesheets/css/style.css">
 </head>
@@ -42,45 +42,30 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <div class="container-rama">
-                    <div id="close-form-j" class="close-form ">
-                        <span></span>
-                        <span></span>
+                <div class="container-rama border-all">
+                    <div class="top-name-form border-all">
+                        <span class="title-mame-dialog">comment</span>
+                        <button type="button" class="close-form border-all btn btn-default" title="close">
+                            <span class="close-for-forms"></span>
+                        </button>
                     </div>
-                    <div class="container-form">
-                        <div class="form-group">
-                            <label class="col-sm-2 col-form-label">Имя:</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="Василий">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-form-label">Эл.адрес:</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="mail@gmail.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-form-label">Тема:</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="Отзыв, предложение, ..">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-form-label">Текст</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" placeholder="..."></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-form-label"></label>
-                            <div class="col-sm-10">
-                                <input type="button" class="btn bottom-send" value="Отправить">
-                            </div>
-                        </div>
-
+                    <div class="form-content">
+                         <form>
+                            <fieldset>
+                                <label class="col-form-label">Имя:</label>
+                                <input id="name-person" class="form-control text border-all" type="text" placeholder="Василий" name="name">
+                                <label class="col-form-label">Эл.адрес:</label>
+                                <input id="mail-person" class="form-control text border-all" type="text" placeholder="mail@gmail.com">
+                                <label class="col-form-label">Сообщение:</label>
+                                <textarea id="text-person" class="form-control text border-all" placeholder="не более 2000 символов"></textarea>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="button-content border-all">
+                        <button type="button" class="border-all btn btn-default " title="send">Отправить</button>
                     </div>
                 </div>
+               </div>
             </div>
         </div>
     </div>
