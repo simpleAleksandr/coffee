@@ -13,15 +13,20 @@
     <link rel="stylesheet" href="components/stylesheets/css/style.css">
     <script src="components/scripts/app/app.js"></script>
     <script src="components/scripts/app/main.js"></script>
+    <script src="components/scripts/app/runs/runModWind.js"></script>
+    <script src="components/scripts/app/directives/testDerictive.js"></script>
     <script src="components/scripts/app/controllers/pictureCntrl.js"></script>
     <script src="components/scripts/app/controllers/contactCtrl.js"></script>
     <script src="components/scripts/app/controllers/categoryCtrl.js"></script>
     <script src="components/scripts/app/controllers/copyrightCtrl.js"></script>
     <script src="components/scripts/app/controllers/smallPictCtrl.js"></script>
     <script src="components/scripts/app/controllers/titleCtrl.js"></script>
-    <script src="components/scripts/app/directives/testDerictive.js"></script>
+    <script src="components/scripts/app/services/modalWinServ.js"></script>
+    <script src="components/scripts/app/directives/dirComments.js"></script>
+
+
 </head>
-<body data-ng-controller="TitleCtrl as TitleCtrl" data-ng-cloak>
+<body data-ng-controller="TitleCtrl as TitleCtrl" class="wrapper" ng-class="{smoothOpacity:true}">
 <div class="container-fluid">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -29,7 +34,7 @@
                 <li>
                     <div class="navbar-header">
                         <ul class="nav nav-tabs">
-                            <li data-ng-repeat="title in TitleCtrl.titleName.sender"><a>{{title.send}}</a></li>
+                            <li data-ng-repeat="title in TitleCtrl.titleName.sender"><a foo>{{title.send}}</a></li>
                         </ul>
                     </div>
                 </li>

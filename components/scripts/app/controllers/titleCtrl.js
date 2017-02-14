@@ -3,7 +3,7 @@ angular.module('sPainter').controller('TitleCtrl', function () {
         {
             sender: [
                 {send: 'Отправить:'},
-                {send: 'Комантарий'},
+                {send: 'Коментарий'},
                 {send: '/'},
                 {send: 'Письмо'}
             ],

@@ -6,7 +6,7 @@ angular.module('sPainter', ['ngRoute']).config(function ($routeProvider, $locati
     $routeProvider.when('/gallery', {
             templateUrl: "view/viewgallery/viewgallery.html"
         });
-    $routeProvider.when('/send', {
-            templateUrl: 'view/viewformsend/viewformsend.html'
-        });
+    $routeProvider.when('/admin', {
+        templateUrl: '<h1>This is administrator panel</h1>'
+    });
 });
